@@ -2,18 +2,26 @@
   display: flex;
   flex-direction: row;
   margin: auto;
-  /* text-align: center; */
-  /* border: 1px solid; */
+  margin-bottom: 1rem;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   padding: 1rem;
+  border: 2px solid;
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: background-color 0.1s ease;
+  color: #fff;
+}
+
+.attribution:hover {
+  transition: background-color 0.1s ease;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
 }
 
 .attribution a {
   text-decoration: none;
-  color: #2b2d42;
-}
-
-.attribution a:hover {
-  color: rgba(0, 0, 0, 0.3);
+  color: inherit;
 }

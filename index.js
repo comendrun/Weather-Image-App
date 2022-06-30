@@ -3,43 +3,39 @@ const cors = require("cors");
 const app = express();
 const axios = require("axios");
 const dotenv = require("dotenv");
-const { response } = require("express");
 dotenv.config();
 const PORT = 8080;
 
 const UNSPLASHAPIKEY = process.env.REACT_APP_UNSPLASH_API_KEY;
-
 const openAPIKEY = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
-
-// console.log(openAPIKEY)
 
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json("HI");
+  res.json(
+    "Hello This is my Port for my API KEYS. Hope it never get EXPOSED :)"
+  );
 });
 
-`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${openAPIKEY}&units=metric`;
-
 app.get("/weather", (req, res) => {
-  //   console.log(req);
-
   const options = {
     method: "GET",
     url: "https://api.openweathermap.org/data/2.5/weather",
     params: {
       appid: openAPIKEY,
-      q: "urmia",
+      q: req.query.q,
       units: "metric",
     },
   };
   axios
     .request(options)
     .then((response) => {
-      console.log(response);
+      if (!response.status === 200) throw new Error(response.statusText);
+      res.json(response.data);
     })
-    .catch((error) => {
-      console.error(error);
+    .catch((err) => {
+      console.error(err.response.data);
+      res.json(err.response.data);
     });
 });
 
@@ -64,6 +60,6 @@ app.get("/unsplash", (req, res) => {
     });
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log(`Server is Running on ${PORT}`);
 });

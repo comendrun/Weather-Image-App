@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+This Project # Weather App (with related background-image to user's input )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+### The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Users should be able to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a ReactJs app that I made using two different APIs. both APIs get the input from the user and search for the proper response for it in the backend.
+one API is for weather information by the OpenWeatherMap website and the other one is for the Unsplash website to get a related Image from Unsplash servers with the entered input from the user.
+I used the backend (NodeJS, ExpressJS) to hide my API keys from any visitor. it was a fun way of hiding API keys because for a long time I just wondered if it is possible to hide this kind of information from the sight of visitors and thanks to this [toturial](https://www.youtube.com/watch?v=FcwfjMebjTU) from Ania Kubów I was able to do it.
 
-### `npm test`
+### Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Live Site URL: [ live site ](https://comendrun.com/weather-app)
 
-### `npm run build`
+## My process
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React JS
+- Node JS (Express JS)
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I learned
 
-### `npm run eject`
+It was a very good opportunity to work with API's and also learn how to hide my API keys on backend of my website. it was a very fun experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Continued development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Useful resources
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Ania Kubow Youtube Chanel](https://www.youtube.com/watch?v=FcwfjMebjTU) - It was a great source to learn how properly hide my API keys on backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Tyler Potts Youtube Chanel](https://www.youtube.com/watch?v=GuA0_Z1llYU&t=1342s) - a very helpful tutorial to make a functional weather app.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Website - [@comendrun](https://comendrun.com/)
+- Github - [@comendrun](https://github.com/comendrun)
+- Frontend Mentor - [@comendrun](https://www.frontendmentor.io/profile/comendrun)
+- Twitter - [@comendrun](https://twitter.com/comendrun)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I want to specially Thank dear @DManavi for his great mentorship and or a lot of helpful and useful feedback that he gives to me everytime i ask for his help. Thank you Danial!
