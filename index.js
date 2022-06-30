@@ -4,7 +4,7 @@ const app = express();
 const axios = require("axios");
 const dotenv = require("dotenv");
 dotenv.config();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const UNSPLASHAPIKEY = process.env.REACT_APP_UNSPLASH_API_KEY;
 const openAPIKEY = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
