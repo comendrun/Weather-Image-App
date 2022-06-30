@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/Weather-Project-Copy/static/css/main.df2453e9.css",
-    "main.js": "/Weather-Project-Copy/static/js/main.395661d0.js",
-    "index.html": "/Weather-Project-Copy/index.html",
-    "main.df2453e9.css.map": "/Weather-Project-Copy/static/css/main.df2453e9.css.map",
-    "main.395661d0.js.map": "/Weather-Project-Copy/static/js/main.395661d0.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.df2453e9.css",
-    "static/js/main.395661d0.js"
-  ]
+  "main.css": "/Weather-Image-App/static/css/main.c9db7a84.chunk.css",
+  "main.js": "/Weather-Image-App/static/js/main.71b15f0d.chunk.js",
+  "main.js.map": "/Weather-Image-App/static/js/main.71b15f0d.chunk.js.map",
+  "static/js/1.64501c5e.chunk.js": "/Weather-Image-App/static/js/1.64501c5e.chunk.js",
+  "static/js/1.64501c5e.chunk.js.map": "/Weather-Image-App/static/js/1.64501c5e.chunk.js.map",
+  "runtime~main.js": "/Weather-Image-App/static/js/runtime~main.13b03955.js",
+  "runtime~main.js.map": "/Weather-Image-App/static/js/runtime~main.13b03955.js.map",
+  "static/css/main.c9db7a84.chunk.css.map": "/Weather-Image-App/static/css/main.c9db7a84.chunk.css.map",
+  "index.html": "/Weather-Image-App/index.html",
+  "precache-manifest.db1ded42682a4c324e8b1dbd9bff5a13.js": "/Weather-Image-App/precache-manifest.db1ded42682a4c324e8b1dbd9bff5a13.js",
+  "service-worker.js": "/Weather-Image-App/service-worker.js"
 }
