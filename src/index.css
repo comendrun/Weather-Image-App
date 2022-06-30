@@ -1,13 +1,244 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+  padding: 25px;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  background-color: transparent;
+
+  background-color: rgba(26.3%, 38%, 93.3%, 0.4);
+
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid orange;
+}
+
+#root {
+  /* border: 1px solid blue; */
+  min-height: 100vh;
+}
+
+.whole-page {
+  min-width: 100%;
+  min-height: 100vh;
+  /* border: 1px solid orange; */
+  display: flex;
+}
+
+.App {
+  border: none;
+  border-radius: 20px;
+  /* width: 400px; */
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  align-content: center;
+  min-height: 80vh;
+  margin: 1rem auto;
+  /* border: 1px solid red; */
+
+  box-shadow: 5px 5px 20px;
+}
+
+.container {
+  text-align: center;
+
+  padding: 1rem;
+  margin: auto;
+  color: white;
+
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-in;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2));
+}
+
+/* @keyframes showingelements {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* im trying to add some animation to the element so that when a search results came in, it doesnt just pop up on screen and comes smoothly */
+
+/* .show {
+  animation-name: showingelements;
+  animation-duration: 1s;
+  transition: all 1s ease-in;
+} */
+
+.container .not-show {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.container > * {
+  margin: 1rem;
+}
+
+.location-info,
+.weather-info {
+  margin: 1.5rem;
+}
+
+img {
+  color: white;
+}
+
+/* .search-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: rgba(4, 102, 200, 0.6);
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #001233;
+} */
+
+/* .search-box {
+  margin: 20px 55px;
+
+  display: block;
+  width: 90%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 16px 0px 16px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.input:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.input:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+} */
+
+.city {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.degree {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 900;
+
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+
+  padding: 1rem;
+}
+
+.sky {
+  margin-top: 5px;
+  font-size: 20px;
+
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.date {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.label {
+  margin-bottom: 0;
+}
+
+.location-info {
+  min-width: 100px;
+  min-height: 100px;
+
+  margin-inline: auto;
+  border-radius: 20%;
+  padding: 1rem;
+}
+
+.weather-icon {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 900;
+
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 600px) {
+  .App {
+    margin: auto;
+    width: 400px;
+  }
 }
