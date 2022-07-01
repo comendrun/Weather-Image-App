@@ -1,3 +1,5 @@
+#This is still a work in progress. i will update its functionality as soon as possible.
+
 This Project # Weather App (with related background-image to user's input )
 
 ## Table of contents
