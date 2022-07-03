@@ -55,6 +55,7 @@ body {
   margin: 1rem auto;
 
   box-shadow: 5px 5px 20px;
+  
 }
 
 .container {
@@ -202,8 +203,24 @@ img {
   color: black;
 }
 
+
+.pending {
+  font-size: 20px;
+  color: black;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.error {
+  font-size: 20px;
+  color: black;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 600px) {
   .App {
-    width: 400px;
+    width: 500px;
   }
 }

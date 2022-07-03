@@ -11,7 +11,6 @@ function App() {
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [hideBackground, setHideBackground] = useState(false);
-  // console.log(hideBackground);
 
   const months = [
     "January",
@@ -31,15 +30,14 @@ function App() {
   let month = months[d.getMonth()];
 
   // new: now we get information from backend
-  const imageURLForBackend = `http://localhost:8080/unsplash?query=${query}`;
-  const weatherURLForBackend = `http://localhost:8080/weather?q=${query}`;
+  const imageURLForBackend = `https://weather-app-servers.herokuapp.com/unsplash?query=${query}`;
+  const weatherURLForBackend = `https://weather-app-servers.herokuapp.com/weather?q=${query}`;
 
   const fetchings = () => {
     setError(null);
-    setIsPending(true);
+
     try {
       fetch(weatherURLForBackend)
-        // setIsPending(true)
         .then((res) => res.json())
         .then((data) => {
           if (data.cod === 200) {
@@ -59,14 +57,15 @@ function App() {
         setImage(data);
       });
     setQuery("");
-    setIsPending(false);
   };
 
   // this is one of those situations that the fetching function
   //  gets triggered by presssing enter button on user's keyboard ->
   const search = (pressedKey) => {
     if (pressedKey.key === "Enter") {
+      setIsPending(true);
       fetchings();
+      setIsPending(false);
     }
   };
 
