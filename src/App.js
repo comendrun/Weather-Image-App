@@ -33,11 +33,12 @@ function App() {
   const imageURLForBackend = `https://weather-app-servers.herokuapp.com/unsplash?query=${query}`;
   const weatherURLForBackend = `https://weather-app-servers.herokuapp.com/weather?q=${query}`;
 
-  const fetchings = () => {
+  const fetchings = async () => {
     setError(null);
 
     try {
-      fetch(weatherURLForBackend)
+      await fetch(weatherURLForBackend)
+        .then(setIsPending(true))
         .then((res) => res.json())
         .then((data) => {
           if (data.cod === 200) {
@@ -51,11 +52,12 @@ function App() {
       console.log(err);
     }
 
-    fetch(imageURLForBackend)
+    await fetch(imageURLForBackend)
       .then((res) => res.json())
       .then((data) => {
         setImage(data);
       });
+    setIsPending(false);
     setQuery("");
   };
 
@@ -63,9 +65,9 @@ function App() {
   //  gets triggered by presssing enter button on user's keyboard ->
   const search = (pressedKey) => {
     if (pressedKey.key === "Enter") {
-      setIsPending(true);
+      // setIsPending(true);
       fetchings();
-      setIsPending(false);
+      // setIsPending(false);
     }
   };
 
@@ -107,7 +109,11 @@ function App() {
           searchButtonClick={fetchings}
           value={query}
         />
-        {isPending && <p className="pending">Please wait...</p>}
+        {isPending && (
+          <p className="pending">
+            <i>Loading...</i>
+          </p>
+        )}
         {error && <p className="error">{error}</p>}
         {/* Beginning of the Ternary Operator ==> */}
         {typeof weather.main !== "undefined" ? (
