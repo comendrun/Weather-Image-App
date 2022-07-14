@@ -27,7 +27,7 @@ I used the backend (NodeJS, ExpressJS) to hide my API keys from any visitor. it 
 
 ### Links
 
-- Live Site URL: [ live site ](https://comendrun.com/weather-app)
+- Live Site URL: [ live site ](https://comendrun.com/Weather-Image-App/)
 
 ## My process
 
