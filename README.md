@@ -62,3 +62,7 @@ It was a very good opportunity to work with API's and also learn how to hide my 
 ## Acknowledgments
 
 I want to specially Thank dear @DManavi for his great mentorship and or a lot of helpful and useful feedback that he gives to me everytime i ask for his help. Thank you Danial!
+
+
+# Since heroku has decided to discontinue their free plan, I have to use another service to run my backend service!
+# IN PROGRESS!
